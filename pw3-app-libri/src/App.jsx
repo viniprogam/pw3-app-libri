@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+import CardBooks from './components/CardBooks';
+import livro1 from './assets/livros/cavernas_aco.jpg';
+import livro2 from './assets/livros/correntes_espaco.jpg';
+import livro3 from './assets/livros/fundacao_imperio.jpg';
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+export default function App() {
+  return(
+    <div className='cards'>
+      <CardBooks
+        titulo='Caverna de aço'
+        autor='Isaac Asimav'
+        imagem={livro1}
+      />
+      <CardBooks
+        titulo='As correntes do espaço'
+        autor='Isaac Asimav'
+        imagem={livro2}
+      />
+      <CardBooks
+        titulo='Fundação e império'
+        autor='Isaac Asimav'
+        imagem={livro3}
+      />
+  </div>
   )
+  
 }
-
-export default App

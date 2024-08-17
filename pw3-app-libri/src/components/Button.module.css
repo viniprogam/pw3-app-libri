@@ -1,0 +1,23 @@
+.button{
+    margin: 50px;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #646363;
+    background-color: #757575;
+    color: #ffffff;
+    font-size: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px;
+}
+
+.button:hover{
+    background-color: #a1a1a1;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 800;
+}
