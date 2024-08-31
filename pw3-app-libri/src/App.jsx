@@ -1,29 +1,25 @@
-import './App.css';
-
-import CardBooks from './components/CardBooks';
-import livro1 from './assets/livros/cavernas_aco.jpg';
-import livro2 from './assets/livros/correntes_espaco.jpg';
-import livro3 from './assets/livros/fundacao_imperio.jpg';
+import "./App.css";
+import NavBar from './components/layout/NavBar';
+import Container from './components/layout/Container';
+import Home from './components/pages/Home';
+import CreateBooks from './components/pages/CreateBooks';
+import ListBooks from './components/pages/ListBooks';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
-  return(
-    <div className='cards'>
-      <CardBooks
-        titulo='Caverna de aço'
-        autor='Isaac Asimav'
-        imagem={livro1}
-      />
-      <CardBooks
-        titulo='As correntes do espaço'
-        autor='Isaac Asimav'
-        imagem={livro2}
-      />
-      <CardBooks
-        titulo='Fundação e império'
-        autor='Isaac Asimav'
-        imagem={livro3}
-      />
-  </div>
-  )
-  
+  return (
+    <>
+      <BrowserRouter>
+        <Container>
+          <Routes>
+            <Route path="/" element={<NavBar/>}>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/ListBooks" element={<ListBooks/>}/>
+              <Route path="/CreateBooks" element={<CreateBooks/>}/>
+            </Route>
+          </Routes>
+        </Container>
+      </BrowserRouter>
+    </>
+  );
 }

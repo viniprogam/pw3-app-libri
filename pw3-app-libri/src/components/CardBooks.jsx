@@ -8,10 +8,10 @@ const CardBooks = ({titulo, autor, imagem}) => {
             <p className={style.autor}>{autor}</p>
             <img src={imagem} alt={titulo} title={titulo}/>
             <div>
-                <Button label='DETALHE'/>
+                <Button label='DETALHES'/>
             </div>
         </div>
     )
 }
 
-export default CardBooks
+export default CardBooks;
