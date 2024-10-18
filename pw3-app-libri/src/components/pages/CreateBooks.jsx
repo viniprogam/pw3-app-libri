@@ -21,6 +21,12 @@ const CreateBooks = ()=>{
         console.log(book)
     }
 
+    /* HANDLER DE CAPTURA DOS DADOS DE SELECT */
+    function handlerChangeCategory(event) {
+        setBook({...book,cod_categoria : event.target.value});
+        console.log(book)
+    }
+
     /* RECUPERA OS DADOS DE CATEGORIAS DA APIREST */
     useEffect(()=>{
         fetch('http://localhost:5000/listagemCateorias', {
@@ -68,7 +74,7 @@ const CreateBooks = ()=>{
         .then(
                 (data)=>{
                 console.log(data);
-                // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+                navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
                 }
         )
         .catch(
@@ -117,6 +123,7 @@ const CreateBooks = ()=>{
                     name='categoria'
                     text='Escolha uma categoria de livro'
                     options={categorias}
+                    handlerChangeCategory={handlerChangeBook}
                 />
 
                 <Button 
