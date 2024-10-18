@@ -58,7 +58,7 @@ const CreateBooks = ()=>{
         
         console.log(JSON.stringify(book))
 
-        fetch('http://localhost:5000/inserirLivro', {
+        fetch('http://localhost:5000//inserirLivro', {
                 method:'POST',
                 mode:'cors',
                 headers:{
@@ -74,7 +74,7 @@ const CreateBooks = ()=>{
         .then(
                 (data)=>{
                 console.log(data);
-                navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+                // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
                 }
         )
         .catch(
