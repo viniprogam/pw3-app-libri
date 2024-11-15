@@ -21,6 +21,8 @@ const CreateBooks = () => {
       console.log(book);
     }
   
+
+    /*FUNÇÃO PARA PEGAR O CÓDIGO DA CATEGORIA SELECIONADA */
     function handleChangeCategory(event) {
       setBook({...book, cod_categoria: event.target.value});
       console.log(book);

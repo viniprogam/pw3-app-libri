@@ -26,7 +26,7 @@ const ListBooks = () => {
         .then((resp) => resp.json())
         .then((data) => {
           console.log("LIVROS: " + data.data);
-          setBooks(data);
+          setBooks(data.data);
           console.log("STATE: " + books);
         })
         .catch((err) => {
@@ -41,7 +41,6 @@ const ListBooks = () => {
   
           <ContainerBook>
             {books.map((book) => (
-              // console.log(book.nome_livro)
               <CardBooks
                 cod_livro={book.cod_livro}
                 titulo={book.nome_livro}

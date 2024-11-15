@@ -1,6 +1,6 @@
 import styles from './Input.Module.css';
 
-export default function Input({type, text, name, placeHolder, handlerChangeBook}) {
+export default function Input({type, text, name, placeHolder, handlerChangeBook, value}) {
     return (
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}</label>
@@ -11,6 +11,7 @@ export default function Input({type, text, name, placeHolder, handlerChangeBook}
                 id={name}
                 placeholder={placeHolder}
                 onChange={handlerChangeBook}
+                Value={value}
             />
         </div>
     )

@@ -55,10 +55,14 @@ const DetailBook = () => {
                 <div className={style.container_buttons}>
                     <Button 
                         label='EDITAR'
+                        router='/UpdateBook/'
+                        cod_livro={cod_livro}
                     />
 
                     <Button 
                         label='EXCLUIR'
+                        router='/DeleteBook/'
+                        cod_livro={cod_livro}
                     />
 
                 </div>
